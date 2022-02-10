@@ -3,22 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+html {
+    background-color: lightsteelblue;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    padding: 0 1em;
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     border: 3px solid steelblue;
+    background-color: white;
     box-shadow: 5px 10px 8px 10px #888888;
-    
 }
 h1, h2, h3, p, blockquote {
     margin-bottom: 12px;
 }
 header {
-    background-color: lightsteelblue;
+    border-bottom: 3px solid steelblue;
+    background-image: linear-gradient(white, lightsteelblue);
 }
 
 header h2 {
@@ -27,12 +35,39 @@ header h2 {
     color: steelblue;
     text-shadow: 5px 5px 12px steelblue;
 }
+
 .logoimage{
     float:left;
     margin-right: 15px;
 }
+
+main {
+    padding: 1em;
+    clear: both;
+}
+main h1 {
+    font-size: 170%;
+}
+aside {
+    width: 35%;
+    padding-top: 1.5em;
+}
+section {
+    width: 70%;
+    float: right;
+}
+blockquote {
+    font-style: italic;
+    padding: 1em;
+    border-left: 3px solid steelblue;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
 h3 {
     font-size: 150%;
+}
+a {
+    text-decoration: none;
 }
 section a:link, section a:visited {
     color:maroon;
@@ -47,12 +82,25 @@ aside a:hover, aside a:active {
     color:maroon;
 }
 
-aside ul {
+ul {
     margin: 12px;
-    margin-left: 30px;
+    margin-left: 1em;
+}
+
+li {
+    font-weight: bold;
 }
 
 footer {
-    color: white;
+    clear: both;
     background-color: steelblue;
+    padding: 15px 0px;
+    margin-top: 15px;
+}
+
+footer p {
+    color: white; 
+    font-weight: bold;
+    text-align: center;
+    font-variant: small-caps;
 }
