@@ -10,6 +10,7 @@
 }
 html {
     background-color: lightsteelblue;
+    background-image: url("../images/bgtile.jpg");
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -41,6 +42,35 @@ header h2 {
     margin-right: 15px;
 }
 
+/*horizontal inline navigation menu */
+#nav_menu {
+    margin: 0;
+}
+#nav_menu ul{
+    list-style-type: none;
+    text-align: center;
+    border-top: 1px solid steelblue;
+    border-bottom: 1px solid steelblue;
+    background-color: steelblue;
+    padding: 10px 0;
+}
+#nav_menu ul li {
+    display: inline;
+    border-right: 2px solid black;
+    padding: 10px 3em;
+}
+#nav_menu ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+#nav_menu ul li a:hover{
+    color: red;
+}
+#nav_menu ul li:hover{
+    background-color: lightsteelblue;
+}
+/* where we left off */
 main {
     padding: 1em;
     clear: both;
@@ -52,6 +82,31 @@ aside {
     width: 35%;
     padding-top: 1.5em;
 }
+#nav_list h2{
+    margin-bottom: 5px;
+    text-align: center;
+}
+#nav_list ul{
+    list-style: none;
+}
+#nav_list ul li{
+    width: 90%;
+    margin: o auto .5em;
+}
+#nav_list ul li a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: lightsteelblue;
+    padding: .5em 0 .5em .5em;
+    margin: .5em;
+    color: black;
+}
+#nav_list ul li a:hover{
+    color: white;
+    background-color: steelblue;
+}
+
 section {
     width: 70%;
     float: right;
@@ -66,7 +121,7 @@ blockquote {
 h3 {
     font-size: 150%;
 }
-a {
+aside a {
     text-decoration: none;
 }
 section a:link, section a:visited {
@@ -82,12 +137,12 @@ aside a:hover, aside a:active {
     color:maroon;
 }
 
-ul {
+aside ul {
     margin: 12px;
     margin-left: 1em;
 }
 
-li {
+aside li {
     font-weight: bold;
 }
 
