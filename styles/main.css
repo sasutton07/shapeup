@@ -37,9 +37,9 @@ header h2 {
     text-shadow: 5px 5px 12px steelblue;
 }
 
-.logoimage{
+#logoimage{
     float:left;
-    margin-right: 15px;
+    margin-right: 1.5em;
 }
 /*inline nav stuff -- important for quiz*/
 
@@ -127,7 +127,6 @@ main h1 {
 }
 aside {
     width: 30%;
-    
 }
 #nav_list{
     padding-right: .5em;
@@ -153,6 +152,7 @@ aside {
     padding: .5em 0 .5em .5em;
     margin: .5em;
     color: black;
+    border-radius: 25px;
 }
 #nav_list ul li a:hover{
     color: white;
@@ -200,8 +200,7 @@ aside a:hover, aside a:active {
 }
 
 aside ul {
-    margin: 12px;
-    margin-left: 1em;
+    margin: 1em;
     width: 120%;
 }
 
@@ -212,7 +211,7 @@ aside li {
 footer {
     clear: both;
     background-color: steelblue;
-    padding: 15px 0px;
+    padding: 1em 0px;
     margin-top: 15px;
 }
 
@@ -222,3 +221,47 @@ footer p {
     text-align: center;
     font-variant: small-caps;
 }
+/*hide the mobilemenu*/
+#mobilemenu {
+    display: none;
+}
+
+/*media queries*/
+@media only screen and (max-width: 900px) {
+    body {
+      box-shadow: none;
+      font-size: 90%;
+    }
+ }
+@media only screen and (max-width: 767px) {
+    #nav_menu{
+        display: none;
+    }
+    #mobilemenu {
+        display: block;
+    }
+    .slicknav_menu {
+        background-color: steelblue !important;
+    }
+    header h2 {
+        font-size: 200%;
+    }
+    section, aside {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        padding: .5em;
+    }
+    aside ul li {
+        padding-right: 1.2em;
+    }
+    #logoimage {
+        float: none;
+        padding: .5em;
+        display: block;
+        margin: 0 auto;
+    }
+    header h2, header h3 {
+        text-align: center;
+    }
+ }

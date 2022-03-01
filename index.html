@@ -4,19 +4,30 @@
 
 <head>
 	<meta charset="utf-8" />
+	<!-- responsive stuff-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="icon" href="images/favicon.ico">
-	<link rel="normalize" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/normalize.css">
 	<title>Shape Up</title>
+	<link rel="stylesheet" href="/styles/slicknav.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		});
+		</script>
 </head>
 
 <body>
 	<header class="clearfix">
-		<img class="logoimage" src="images/shape_up_logo.png" alt="">
+		<img id="logoimage" src="images/shape_up_logo.png" alt="">
 		<h2>Shape Up!</h2>
 		<h3>Find the best fit for you</h3>
 	</header>
+	<nav id="mobilemenu"></nav>
 	<nav id="nav_menu">
 		<ul>
 			<li><a href="index.html">Home</a></li>
