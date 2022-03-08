@@ -7,9 +7,9 @@
 	<!-- responsive stuff-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="styles/normalize.css">
 	<title>Shape Up</title>
 	<link rel="stylesheet" href="styles/slicknav.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,7 +23,7 @@
 
 <body>
 	<header class="clearfix">
-		<a href="index.html"><img id="logoimage" src="images/shape_up_logo.png" alt="logoimage"></a>
+		<a href="index.html"><img id="logoimage" src="images/shape_up_logo.png" alt="logoimage" title="return to homepage"></a>
 		<h2>Shape Up!</h2>
 		<h3>Find the best fit for you</h3>
 	</header>
@@ -66,6 +66,11 @@
 					<li><a href="https://www.self.com/gallery/power-yoga-workout" target="blank">Yoga workout</a></li>
 				</ul>
 			</nav>
+			<article>
+				<img src="images/break.jpg">
+				<img src="images/exercise.jpg">
+				<img src="images/meditate.jpg">
+			</article>
 		</aside>
 
 		<section>
@@ -80,19 +85,23 @@
 
 			<h3>What We Offer</h3>
 
+			<img class="icon" src="images/weightlifting.png">
 			<h3><a href="strength/index.html">Build strong muscles</a></h3>
 			<p>Tired of being tired? Strength training can help you manage or lose weight and increase your metabolism
 				to help you burn more calories. It can also increase bone density and reduce the risk of osteoporosis.
 			</p>
 
+			<img class="icon" src="images/cyclist.png">
 			<h3><a href="cardio/index.html"> Get Your Heart Rate Up</a></h3>
 			<p>Want to lose weight? Cardiovascular exercise burns calories and improves overall health. It can reduce
 				belly fat, promote brain growth, prevent stress, and help you focus.</p>
 
+			<img class="icon" src="images/lotus-position.png">
 			<h3><a href="stress/index.html">Relax</a></h3>
 			<p>Stressed out? Stress can weaken the immune system and cause high blood pressure, fatigue, depression,
 				anxiety, and even heart disease. Learn ways to manage and reduce stress.</p>
 
+			<img class="icon" src="images/vegetables.png">
 			<h3><a href="diet/index.html">Eat what's right for you</a></h3>
 			<p>Are you really what you eat? Lose weight, gain weight, or just feel great! Maintaining a healthy diet is
 				probably the most important thing you can do to promote overall health.</p>
@@ -107,17 +116,23 @@
 			<h3>Dress for Success</h3>
 			<p>Workout clothes should be comfy. While exercising, you should be thinking about what you're doing, not what you're wearing. That includes good shoes, which are essential for running, jogging, or walking, and socks that absorb shock and sweat.</p>
 
-			<h2>Equipment?</h2>
+			<h3>Equipment?</h3>
 			<p>You don't need to buy a lot of fancy equipment to get in shape. But you might want to invest in a yoga mat, a large exercise ball, or some weights, depending on your Shape Up! plan.</p>
 
-			<h2>Resist Temptation</h2>
+			<h3>Resist Temptation</h3>
 			<p>It's hard to eat right when everyone else is buying lunch at a fast food restaurant. Invest in some good food containers and bring your healthy lunch and snacks. Your body and your wallet will thank you.</p>
 		</aside>
 
 	</main>
 
+	<script>
+        window.onload = function() {
+            var d = new Date();
+            document.getElementById("copyright").innerHTML = d.getFullYear();
+        }
+    </script>
 	<footer>
-		<p>&copy;2022 Shape Up!</p>
+		<p>&copy; <span id="copyright"></span> Shape Up!</p>
 	</footer>
 
 </body>
